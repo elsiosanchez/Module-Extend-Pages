@@ -1,6 +1,3 @@
 export default defineNuxtConfig({
-  modules: [
-    // '~/modules/pages',
-    "@nuxt/ui"
-  ]
+  modules: ["~/modules/test/index", "@element-plus/nuxt", "@nuxt/ui"],
 });

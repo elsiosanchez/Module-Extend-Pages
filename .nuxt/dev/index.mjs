@@ -1,25 +1,25 @@
-globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file:///project/sandbox/node_modules/node-fetch-native/dist/polyfill.mjs';
+globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file:///project/Module-Extend-Pages/node_modules/node-fetch-native/dist/polyfill.mjs';
 import { Server } from 'node:http';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
-import { provider, isWindows } from 'file:///project/sandbox/node_modules/std-env/dist/index.mjs';
-import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseStatus, getRequestHeader, getRequestHeaders, setResponseHeader, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler, getQuery, createError } from 'file:///project/sandbox/node_modules/h3/dist/index.mjs';
-import { createRenderer } from 'file:///project/sandbox/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import devalue from 'file:///project/sandbox/node_modules/@nuxt/devalue/dist/devalue.mjs';
-import { renderToString } from 'file:///project/sandbox/node_modules/vue/server-renderer/index.mjs';
-import { createFetch as createFetch$1, Headers } from 'file:///project/sandbox/node_modules/ofetch/dist/node.mjs';
-import destr from 'file:///project/sandbox/node_modules/destr/dist/index.mjs';
-import { createCall, createFetch } from 'file:///project/sandbox/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file:///project/sandbox/node_modules/hookable/dist/index.mjs';
-import { snakeCase } from 'file:///project/sandbox/node_modules/scule/dist/index.mjs';
-import defu, { defuFn } from 'file:///project/sandbox/node_modules/defu/dist/defu.mjs';
-import { hash } from 'file:///project/sandbox/node_modules/ohash/dist/index.mjs';
-import { parseURL, withoutBase, joinURL, withQuery } from 'file:///project/sandbox/node_modules/ufo/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file:///project/sandbox/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file:///project/sandbox/node_modules/unstorage/drivers/fs.mjs';
-import { toRouteMatcher, createRouter } from 'file:///project/sandbox/node_modules/radix3/dist/index.mjs';
+import { provider, isWindows } from 'file:///project/Module-Extend-Pages/node_modules/std-env/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseStatus, getRequestHeader, getRequestHeaders, setResponseHeader, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler, getQuery, createError } from 'file:///project/Module-Extend-Pages/node_modules/h3/dist/index.mjs';
+import { createRenderer } from 'file:///project/Module-Extend-Pages/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import devalue from 'file:///project/Module-Extend-Pages/node_modules/@nuxt/devalue/dist/devalue.mjs';
+import { renderToString } from 'file:///project/Module-Extend-Pages/node_modules/vue/server-renderer/index.mjs';
+import { createFetch as createFetch$1, Headers } from 'file:///project/Module-Extend-Pages/node_modules/ofetch/dist/node.mjs';
+import destr from 'file:///project/Module-Extend-Pages/node_modules/destr/dist/index.mjs';
+import { createCall, createFetch } from 'file:///project/Module-Extend-Pages/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file:///project/Module-Extend-Pages/node_modules/hookable/dist/index.mjs';
+import { snakeCase } from 'file:///project/Module-Extend-Pages/node_modules/scule/dist/index.mjs';
+import defu, { defuFn } from 'file:///project/Module-Extend-Pages/node_modules/defu/dist/defu.mjs';
+import { hash } from 'file:///project/Module-Extend-Pages/node_modules/ohash/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, withQuery } from 'file:///project/Module-Extend-Pages/node_modules/ufo/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file:///project/Module-Extend-Pages/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file:///project/Module-Extend-Pages/node_modules/unstorage/drivers/fs.mjs';
+import { toRouteMatcher, createRouter } from 'file:///project/Module-Extend-Pages/node_modules/radix3/dist/index.mjs';
 
 const inlineAppConfig = {};
 
@@ -68,7 +68,7 @@ function deepFreeze(object) {
   return Object.freeze(object);
 }
 
-const serverAssets = [{"baseName":"server","dir":"/project/sandbox/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"/project/Module-Extend-Pages/server/assets"}];
 
 const assets = createStorage();
 
@@ -80,10 +80,10 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/project/sandbox","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/project/sandbox/server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/project/sandbox/.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/project/sandbox/.nuxt/cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/project/Module-Extend-Pages","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/project/Module-Extend-Pages/server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/project/Module-Extend-Pages/.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/project/Module-Extend-Pages/.nuxt/cache","ignore":["**/node_modules/**","**/.git/**"]}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -380,14 +380,14 @@ function getRouteRulesForPath(path) {
 
 const script = "\"use strict\";const w=window,de=document.documentElement,knownColorSchemes=[\"dark\",\"light\"],preference=window.localStorage.getItem(\"nuxt-color-mode\")||\"system\";let value=preference===\"system\"?getColorScheme():preference;const forcedColorMode=de.getAttribute(\"data-color-mode-forced\");forcedColorMode&&(value=forcedColorMode),addColorScheme(value),w[\"__NUXT_COLOR_MODE__\"]={preference,value,getColorScheme,addColorScheme,removeColorScheme};function addColorScheme(e){const o=\"\"+e+\"\",t=\"\";de.classList?de.classList.add(o):de.className+=\" \"+o,t&&de.setAttribute(\"data-\"+t,e)}function removeColorScheme(e){const o=\"\"+e+\"\",t=\"\";de.classList?de.classList.remove(o):de.className=de.className.replace(new RegExp(o,\"g\"),\"\"),t&&de.removeAttribute(\"data-\"+t)}function prefersColorScheme(e){return w.matchMedia(\"(prefers-color-scheme\"+e+\")\")}function getColorScheme(){if(w.matchMedia&&prefersColorScheme(\"\").media!==\"not all\"){for(const e of knownColorSchemes)if(prefersColorScheme(\":\"+e).matches)return e}return\"light\"}\n";
 
-const _Fq2NsSk1XN = (function(nitro) {
+const _1bRu3IrKjg = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
 const plugins = [
-  _Fq2NsSk1XN
+  _1bRu3IrKjg
 ];
 
 function defineRenderHandler(handler) {
@@ -503,11 +503,11 @@ const errorHandler = (async function errorhandler(error, event) {
   event.node.res.end(await res.text());
 });
 
-const _lazy_oQftOX = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_wDFO7Z = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_oQftOX, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_oQftOX, lazy: true, middleware: false, method: undefined }
+  { route: '/__nuxt_error', handler: _lazy_wDFO7Z, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_wDFO7Z, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -647,9 +647,9 @@ function publicAssetsURL(...path) {
 
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
-const getClientManifest = () => import('/project/sandbox/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getClientManifest = () => import('/project/Module-Extend-Pages/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getStaticRenderedHead = () => Promise.resolve().then(function () { return _virtual__headStatic$1; }).then((r) => r.default || r);
-const getServerEntry = () => import('/project/sandbox/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getServerEntry = () => import('/project/Module-Extend-Pages/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {

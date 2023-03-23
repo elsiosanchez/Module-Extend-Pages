@@ -1,5 +1,5 @@
 
-import { defuFn } from '/project/sandbox/node_modules/defu/dist/defu.mjs'
+import { defuFn } from '/project/Module-Extend-Pages/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 
