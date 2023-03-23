@@ -1,0 +1,15 @@
+{
+  "name": "example-module-extend-pages",
+  "private": false,
+  "repository": "https://github.com/elsiosanchez/pages-basic.git",
+  "author": "elsiosanchez <elsiosanches@gmail.com>",
+  "scripts": {
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "start": "nuxi preview"
+  },
+  "devDependencies": {
+    "@nuxt/ui": "^0.3.3",
+    "nuxt": "^3.0.0"
+  }
+}
